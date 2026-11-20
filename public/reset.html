@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atur Ulang Kata Sandi — Mitsuyomi</title>
+<meta name="description" content="Buat kata sandi baru untuk akun Mitsuyomi.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css?v=141">
+</head>
+<body>
+<div class="topbar"><span class="marquee" id="marquee"></span></div>
+<header class="site">
+  <div class="wrap header-in">
+    <a class="logo" href="/"><img src="/favicon.svg" alt="Logo Mitsuyomi">MITSUYOMI<span class="dot">.</span></a>
+    <nav class="main">
+      <a href="/">Beranda</a>
+      <a href="/jelajahi">Jelajahi</a>
+      <a href="/koleksi">Koleksi</a>
+      <a href="/akun" class="active">Akun</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="block">
+    <div class="auth-wrap">
+      <div class="sec-sub">Buat kata sandi baru</div>
+      <h2 class="auth-title">ATUR <span class="acc">ULANG</span></h2>
+      <div class="auth-card">
+        <div class="msg-err" id="formErr" style="display:none"></div>
+        <form id="resetForm" novalidate>
+          <div class="field">
+            <label for="resetPassword">Kata Sandi Baru</label>
+            <div class="pw-wrap">
+              <input type="password" id="resetPassword" autocomplete="new-password" placeholder="Minimal 8 karakter" required>
+              <button type="button" class="eye" aria-label="Tampilkan kata sandi"></button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="resetPassword2">Ulangi Kata Sandi Baru</label>
+            <div class="pw-wrap">
+              <input type="password" id="resetPassword2" autocomplete="new-password" placeholder="Ketik ulang kata sandi baru" required>
+              <button type="button" class="eye" aria-label="Tampilkan kata sandi"></button>
+            </div>
+          </div>
+          <button class="btn acc auth-submit" type="submit" id="resetBtn">Simpan Kata Sandi</button>
+        </form>
+        <div id="resetDone" style="display:none">
+          <div class="msg-ok"><b>Kata sandi berhasil diubah.</b><br>Sekarang masuk dengan kata sandi barumu.</div>
+          <a class="btn acc auth-submit" href="/masuk">Masuk</a>
+        </div>
+        <div class="auth-links">
+          <span>Tautan kedaluwarsa? <a href="/lupa-password">Minta tautan baru</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="foot-links">
+    <a href="/">Beranda</a><a href="/jelajahi">Jelajahi</a><a href="/koleksi">Koleksi</a><a href="/akun">Akun</a>
+  </div>
+  <div class="foot-note">Mitsuyomi — baca manga, manhwa & manhua Bahasa Indonesia.</div>
+  <div class="foot-giant">MITSU<span class="acc">YOMI</span></div>
+</footer>
+
+<script src="/js/common.js?v=141"></script>
+<script src="/js/reset.js?v=141"></script>
+</body>
+</html>

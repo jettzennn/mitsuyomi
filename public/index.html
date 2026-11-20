@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mitsuyomi — Baca Manga, Manhwa & Manhua Bahasa Indonesia</title>
+<meta name="description" content="Mitsuyomi — tempat baca manga, manhwa, dan manhua Bahasa Indonesia. Update chapter terbaru setiap hari, gratis tanpa ribet.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css?v=141">
+</head>
+<body>
+<div class="topbar"><span class="marquee" id="marquee"></span></div>
+<header class="site">
+  <div class="wrap header-in">
+    <a class="logo" href="/"><img src="/favicon.svg" alt="Logo Mitsuyomi">MITSUYOMI<span class="dot">.</span></a>
+    <nav class="main">
+      <a href="/" class="active">Beranda</a>
+      <a href="/jelajahi">Jelajahi</a>
+      <a href="/koleksi">Koleksi</a>
+      <a href="/akun">Akun</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-in">
+        <div>
+          <div class="kicker">Katalog baca komik — Bahasa Indonesia</div>
+          <h1>BACA KOMIK.</h1>
+        </div>
+        <div class="hero-side">
+          <p class="lead">Jelajahi ribuan manga, manhwa, dan manhua dari berbagai genre. Chapter terbaru ditambahkan setiap hari — tinggal pilih judul favoritmu dan langsung baca, gratis tanpa ribet.</p>
+          <div class="cta-row">
+            <a class="btn acc" href="/jelajahi">Mulai Baca</a>
+            <a class="btn dark" href="#populer">Populer</a>
+          </div>
+          <span class="sticker" id="heroSticker">Update hari ini</span>
+        </div>
+      </div>
+      <form class="hero-search search-gateway" action="/cari" method="get">
+        <input type="search" name="q" placeholder="Cari judul komik…" aria-label="Buka halaman pencarian" readonly>
+        <button type="submit">SEARCH</button>
+      </form>
+      <div class="hero-filters">
+        <a class="flink hot" href="/jelajahi">Semua Genre</a>
+        <a class="flink" href="#terbaru">Terbaru</a>
+        <a class="flink" href="#populer">Populer</a>
+        <a class="flink" href="#rekomendasi">Rekomendasi</a>
+        <a class="flink" href="#genre">Genre</a>
+        <span class="spacer"></span>
+        <a class="btn acc small" href="/cari">Cari Judul</a>
+      </div>
+    </div>
+    <div class="hero-covers" id="heroCovers" aria-hidden="true"></div>
+  </section>
+
+  <div class="wrap">
+    <section class="block" id="terbaru">
+      <div class="sec-head">
+        <div>
+          <div class="sec-sub">Baru saja rilis</div>
+          <h2>UPDATE <span class="acc">TERBARU</span></h2>
+        </div>
+        <a class="more" href="/jelajahi">Semua genre →</a>
+      </div>
+      <div id="latestGrid"><div class="loading"><span class="spin"></span>Memuat komik terbaru…</div></div>
+    </section>
+
+    <section class="block" id="populer">
+      <div class="sec-head">
+        <div>
+          <div class="sec-sub">Paling banyak dibaca</div>
+          <h2>PALING <span class="acc">POPULER</span></h2>
+        </div>
+        <a class="more" href="#populer">Populer →</a>
+      </div>
+      <div id="populerList"><div class="loading"><span class="spin"></span>Memuat komik populer…</div></div>
+    </section>
+
+    <section class="block" id="genre">
+      <div class="sec-head">
+        <div>
+          <div class="sec-sub">Jelajahi berdasarkan genre</div>
+          <h2>GENRE <span class="acc">PILIHAN</span></h2>
+        </div>
+      </div>
+      <div class="chips" id="genreChips"><div class="loading"><span class="spin"></span>Memuat genre…</div></div>
+    </section>
+
+    <section class="block" id="rekomendasi" style="padding-bottom:40px">
+      <div class="sec-head">
+        <div>
+          <div class="sec-sub">Buat kamu yang bingung mau baca apa</div>
+          <h2>REKOMEN<span class="acc">DASI</span></h2>
+        </div>
+        <a class="more" href="#rekomendasi">Rekomendasi →</a>
+      </div>
+      <div id="recomGrid"><div class="loading"><span class="spin"></span>Memuat rekomendasi…</div></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="foot-links">
+    <a href="/">Beranda</a><a href="/jelajahi">Jelajahi</a><a href="/koleksi">Koleksi</a>
+      <a href="/akun">Akun</a><a href="/#populer">Populer</a>
+  </div>
+  <div class="foot-note">Mitsuyomi — baca manga, manhwa & manhua Bahasa Indonesia.</div>
+  <div class="foot-giant">MITSU<span class="acc">YOMI</span></div>
+</footer>
+
+<script src="/js/common.js?v=141"></script>
+<script src="/js/home.js?v=141"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar — Mitsuyomi</title>
+<meta name="description" content="Daftar akun Mitsuyomi gratis untuk membuka konten khusus member.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css?v=141">
+</head>
+<body>
+<div class="topbar"><span class="marquee" id="marquee"></span></div>
+<header class="site">
+  <div class="wrap header-in">
+    <a class="logo" href="/"><img src="/favicon.svg" alt="Logo Mitsuyomi">MITSUYOMI<span class="dot">.</span></a>
+    <nav class="main">
+      <a href="/">Beranda</a>
+      <a href="/jelajahi">Jelajahi</a>
+      <a href="/koleksi">Koleksi</a>
+      <a href="/akun" class="active">Akun</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="block">
+    <div class="auth-wrap">
+      <div class="sec-sub">Gratis, tanpa ribet</div>
+      <h2 class="auth-title">DAF<span class="acc">TAR</span></h2>
+      <div class="auth-card">
+        <div class="msg-err" id="formErr" style="display:none"></div>
+        <div class="auth-tabs" data-default-tab="daftar" role="tablist" aria-label="Masuk atau daftar">
+          <button type="button" class="auth-tab" data-tab="masuk">Masuk</button>
+          <button type="button" class="auth-tab active" data-tab="daftar">Daftar</button>
+        </div>
+
+        <div id="panelMasuk">
+          <div class="msg-ok" id="loginInfo" style="display:none"></div>
+          <form id="loginForm" novalidate>
+            <div class="field">
+              <label for="loginEmail">Email</label>
+              <input type="email" id="loginEmail" autocomplete="email" placeholder="nama@gmail.com" required>
+            </div>
+            <div class="field">
+              <label for="loginPassword">Kata Sandi</label>
+              <div class="pw-wrap">
+                <input type="password" id="loginPassword" autocomplete="current-password" placeholder="Kata sandimu" required>
+                <button type="button" class="eye" aria-label="Tampilkan kata sandi"></button>
+              </div>
+            </div>
+            <button class="btn acc auth-submit" type="submit" id="loginBtn">Masuk</button>
+          </form>
+          <div class="msg-ok" id="notActiveBox" style="display:none">
+            Akunmu belum aktif. Klik tombol di bawah untuk mengirim ulang tautan aktivasi (berlaku 60 detik).
+            <div class="resend-row">
+              <button class="btn dark small" type="button" id="resendActivationBtn">Kirim Ulang Aktivasi</button>
+              <span class="cd-note" id="resendCdNote" style="display:none">Tautan kedaluwarsa dalam <b id="resendCd">60</b> detik</span>
+            </div>
+            <div class="devlink-box" id="resendDevBox" style="display:none">Mode uji (SMTP belum tersambung):<br><a id="resendDevLink" href="#">Buka tautan aktivasi</a></div>
+          </div>
+          <div class="auth-links">
+            <a href="/lupa-password">Lupa kata sandi?</a>
+            <span>Belum punya akun? Klik tab <b>Daftar</b>.</span>
+          </div>
+        </div>
+
+        <div id="panelDaftar" style="display:none">
+          <form id="registerForm" novalidate>
+            <div class="field">
+              <label for="regName">Nama</label>
+              <input type="text" id="regName" autocomplete="name" placeholder="Namamu" required>
+            </div>
+            <div class="field">
+              <label for="regEmail">Email (Gmail)</label>
+              <input type="email" id="regEmail" autocomplete="email" placeholder="nama@gmail.com" required>
+            </div>
+            <div class="cd-note" style="margin:-8px 0 14px;text-align:left">Wajib <b>@gmail.com</b> dan Gmail yang aktif — domain lain ditolak. Tautan verifikasi dikirim ke Gmail itu.</div>
+            <div class="field">
+              <label for="regPassword">Kata Sandi</label>
+              <div class="pw-wrap">
+                <input type="password" id="regPassword" autocomplete="new-password" placeholder="Minimal 8 karakter" required>
+                <button type="button" class="eye" aria-label="Tampilkan kata sandi"></button>
+              </div>
+            </div>
+            <div class="field">
+              <label for="regPassword2">Ulangi Kata Sandi</label>
+              <div class="pw-wrap">
+                <input type="password" id="regPassword2" autocomplete="new-password" placeholder="Ketik ulang kata sandi" required>
+                <button type="button" class="eye" aria-label="Tampilkan kata sandi"></button>
+              </div>
+            </div>
+            <button class="btn acc auth-submit" type="submit" id="registerBtn">Daftar</button>
+          </form>
+
+          <div id="pendingPanel" style="display:none">
+            <div class="msg-ok">
+              <b>Pendaftaran diterima!</b><br>
+              Kami mengirim <b>tautan aktivasi</b> ke email kamu (bukan kode — cukup tekan tombol di email). Cek juga folder Spam/Promosi di Gmail.
+            </div>
+            <div class="cd-wrap">
+              <div class="countdown" id="regCd">60</div>
+              <div class="cd-note">detik tersisa sebelum tautan aktivasi kedaluwarsa</div>
+            </div>
+            <div class="devlink-box" id="regDevBox" style="display:none">Mode uji (SMTP belum tersambung):<br><a id="regDevLink" href="#">Buka tautan aktivasi sekarang</a></div>
+            <div class="resend-row">
+              <button class="btn dark small" type="button" id="resendRegBtn" disabled>Kirim Ulang Tautan</button>
+              <span class="cd-note">Tombol aktif lagi setelah hitung mundur selesai.</span>
+            </div>
+            <button class="btn dark auth-submit" type="button" id="toLoginBtn" style="margin-top:14px">Ke Form Masuk</button>
+            <div class="cd-note" style="margin-top:10px">Setelah aktivasi dari Gmail, masuk lewat tab Masuk — emailmu terisi otomatis, tinggal kata sandi. Kamu tidak otomatis masuk setelah daftar.</div>
+          </div>
+
+          <div class="auth-links">
+            <span>Sudah punya akun? Klik tab <b>Masuk</b>.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="foot-links">
+    <a href="/">Beranda</a><a href="/jelajahi">Jelajahi</a><a href="/koleksi">Koleksi</a><a href="/akun">Akun</a>
+  </div>
+  <div class="foot-note">Mitsuyomi — baca manga, manhwa & manhua Bahasa Indonesia.</div>
+  <div class="foot-giant">MITSU<span class="acc">YOMI</span></div>
+</footer>
+
+<script src="/js/common.js?v=141"></script>
+<script src="/js/auth.js?v=141"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cari Komik — Mitsuyomi</title>
+<meta name="description" content="Cari manga, manhwa, dan manhua favoritmu di Mitsuyomi. Ada riwayat pencarian supaya judul yang sama gampang dicari lagi.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css?v=141">
+</head>
+<body>
+<div class="topbar"><span class="marquee" id="marquee"></span></div>
+<header class="site">
+  <div class="wrap header-in">
+    <a class="logo" href="/"><img src="/favicon.svg" alt="Logo Mitsuyomi">MITSUYOMI<span class="dot">.</span></a>
+    <nav class="main">
+      <a href="/">Beranda</a>
+      <a href="/jelajahi">Jelajahi</a>
+      <a href="/koleksi">Koleksi</a>
+      <a href="/akun">Akun</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="block">
+    <div class="sec-head">
+      <div>
+        <div class="sec-sub" id="searchSub">Ketik judul, hasil langsung muncul — judul utama tampil duluan</div>
+        <h2 id="searchTitle">CARI <span class="acc">KOMIK</span></h2>
+      </div>
+    </div>
+
+    <form class="hero-search big-search" id="bigSearchForm">
+      <input type="search" id="bigSearchInput" placeholder="Cari judul komik…" aria-label="Cari judul komik" autocomplete="off">
+      <button type="submit">SEARCH</button>
+    </form>
+
+    <div class="search-history" id="historySection" style="display:none">
+      <div class="hist-head">
+        <span class="hist-title">Riwayat Pencarian</span>
+        <button type="button" class="hist-clear" id="histClearAll">Hapus Semua</button>
+      </div>
+      <div class="hist-grid" id="histGrid"></div>
+    </div>
+
+    <div id="resultSection" style="display:none">
+      <div id="resultArea" style="margin-top:22px"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="foot-links">
+    <a href="/">Beranda</a><a href="/jelajahi">Jelajahi</a><a href="/koleksi">Koleksi</a><a href="/akun">Akun</a>
+  </div>
+  <div class="foot-note">Mitsuyomi — baca manga, manhwa & manhua Bahasa Indonesia.</div>
+  <div class="foot-giant">MITSU<span class="acc">YOMI</span></div>
+</footer>
+
+<script src="/js/common.js?v=141"></script>
+<script src="/js/search.js?v=141"></script>
+</body>
+</html>

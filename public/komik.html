@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Komik — Mitsuyomi</title>
+<meta name="description" content="Detail komik, sinopsis, dan daftar chapter lengkap di Mitsuyomi.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css?v=141">
+</head>
+<body>
+<div class="topbar"><span class="marquee" id="marquee"></span></div>
+<header class="site">
+  <div class="wrap header-in">
+    <a class="logo" href="/"><img src="/favicon.svg" alt="Logo Mitsuyomi">MITSUYOMI<span class="dot">.</span></a>
+    <nav class="main">
+      <a href="/">Beranda</a>
+      <a href="/jelajahi">Jelajahi</a>
+      <a href="/koleksi">Koleksi</a>
+      <a href="/akun">Akun</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div id="detailArea"><div class="wrap"><div class="loading"><span class="spin"></span>Memuat detail komik…</div></div></div>
+  <div class="wrap">
+    <section class="block" id="chaptersBlock" style="display:none;padding-bottom:44px">
+      <div class="sec-head">
+        <div>
+          <div class="sec-sub">Baca dari awal atau lanjutkan</div>
+          <h2>DAFTAR <span class="acc">CHAPTER</span></h2>
+        </div>
+      </div>
+      <div class="chapter-tools">
+        <input type="search" id="chapterFilter" placeholder="Cari nomor chapter… mis. 58" aria-label="Cari chapter">
+        <button class="btn dark small" id="sortBtn" type="button">Urutan: Terbaru ↓</button>
+      </div>
+      <div class="chapter-list" id="chapterList"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="foot-links">
+    <a href="/">Beranda</a><a href="/jelajahi">Jelajahi</a><a href="/koleksi">Koleksi</a>
+      <a href="/akun">Akun</a><a href="/#populer">Populer</a>
+  </div>
+  <div class="foot-note">Mitsuyomi — baca manga, manhwa & manhua Bahasa Indonesia.</div>
+  <div class="foot-giant">MITSU<span class="acc">YOMI</span></div>
+</footer>
+
+<script src="/js/common.js?v=141"></script>
+<script src="/js/detail.js?v=141"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"dependencies":{},"description":"Mitsuyomi — website baca manga, manhwa, dan manhua (full-stack Node.js + SQLite, Termux).","engines":{"node":">=22.5"},"license":"UNLICENSED","main":"server/server.js","name":"mitsuyomi","private":true,"scripts":{"check-api":"node scripts/check-api.js","start":"node server/server.js"},"type":"commonjs","version":"1.4.1"}

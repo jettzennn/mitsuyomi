@@ -1,0 +1,11 @@
+# Konfigurasi Render.com — deploy Mitsuyomi sebagai Web Service gratis.
+# Di Render: New → Blueprint → pilih repo ini → Apply. Selesai.
+services:
+  - type: web
+    name: mitsuyomi
+    runtime: node
+    plan: free
+    startCommand: node server/server.js
+    envVars:
+      - key: NODE_VERSION
+        value: "22"

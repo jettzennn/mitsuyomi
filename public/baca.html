@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baca Chapter — Mitsuyomi</title>
+<meta name="description" content="Baca chapter komik Bahasa Indonesia di Mitsuyomi.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css?v=141">
+</head>
+<body class="reader">
+<div class="progressbar" id="progressBar"></div>
+<header class="reader-head">
+  <div class="wrap in">
+    <a class="btn small" href="/" style="box-shadow:none">← Beranda</a>
+    <h1 id="readTitle">Memuat chapter…</h1>
+    <span style="flex:1"></span>
+    <a class="btn small" id="toDetail" href="#" style="box-shadow:none;display:none">Detail Komik</a>
+    <select id="chapterSelect" aria-label="Pindah chapter" style="display:none"></select>
+  </div>
+</header>
+
+<main>
+  <div class="pages" id="pages"><div class="loading" style="background:var(--smoke);color:var(--paper);border-color:var(--paper);box-shadow:none"><span class="spin"></span>Memuat halaman chapter…</div></div>
+  <div class="reader-nav bottom" id="navBottom"></div>
+</main>
+
+<script src="/js/common.js?v=141"></script>
+<script src="/js/read.js?v=141"></script>
+</body>
+</html>
